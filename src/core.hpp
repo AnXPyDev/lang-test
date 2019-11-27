@@ -1,10 +1,9 @@
 #pragma once
 
-namespace lt {
-  struct Word;
-};
+namespace lt {};
 
+#include "arg.hpp"
+#include "parse.hpp"
 #include "strlib.hpp"
 #include "word.hpp"
-#include "parse.hpp"
-#include "arg.hpp"
+#include "random.hpp"

@@ -2,6 +2,8 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <time.h>
+
 #include "core.hpp"
 
 using namespace lt;

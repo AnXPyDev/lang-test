@@ -2,7 +2,6 @@
 #include <vector>
 #include <string>
 
-#include "core.hpp"
 #include "arg.hpp"
 
 using namespace lt;

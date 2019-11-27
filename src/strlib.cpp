@@ -4,7 +4,7 @@
 #include <locale>
 #include <codecvt>
 
-#include "core.hpp"
+#include "macros.hpp"
 #include "strlib.hpp"
 
 using namespace lt;
@@ -13,18 +13,18 @@ using namespace lt;
 std::vector<std::string> strlib::split(std::string str, std::string delimiter) {
   std::vector<std::string> result;
   auto string_size = str.size(); auto delimiter_size = delimiter.size();
-  int last_found = -delimiter_size;
+  size_t look_from = delimiter_size;
   bool done = false;
   while (!done) {
-    unsigned int found = str.find(delimiter, last_found + delimiter_size);
+    auto found = str.find(delimiter, look_from);
     if (found == std::string::npos) {
       done = true;
       found = string_size;
     };
-    if (found - (last_found + delimiter_size) > 0) {
-      result.push_back(str.substr(last_found + delimiter_size, found - (last_found + delimiter_size)));
+    if (found - look_from > 0) {
+      result.push_back(str.substr(look_from, found - look_from));
     };
-    last_found = found;
+    look_from = found + delimiter_size;
   };
   return result;
 };
@@ -32,14 +32,14 @@ std::vector<std::string> strlib::split(std::string str, std::string delimiter) {
 // Removes excess characters from beginning and end of string
 std::string strlib::strip(std::string str, char to_strip) {
   auto string_size = str.size();
-  unsigned int left = 0, right = string_size - 1;
-  for (unsigned int i = left; i < string_size; ++i) {
+  size_t left = 0, right = string_size - 1;
+  for (size_t i = left; i < string_size; ++i) {
     if (str[i] != to_strip) {
       left = i;
       break;
     };
   };
-  for (unsigned int i = right; i >= 0; --i) {
+  for (size_t i = right; i >= 0; --i) {
     if (str[i] != to_strip) {
       right = i;
       break;
@@ -53,20 +53,16 @@ std::wstring strlib::string_to_wstring(std::string str) {
   return converter.from_bytes(str);
 }
 
-#define MIN_OF_THREE(a, b, c) (a < (b < c ? b : c) ? a : (b < c ? b : c))
-#define MAX_OF_TWO(a, b) (a > b ? a : b)
-#define CLAMP(a, min, max) (a < min ? min : (a > max ? max : a))
-
 template <class string_type>
-unsigned int T_edit_distance(string_type a, string_type b) {
-  unsigned int msize = MAX_OF_TWO(a.size(), b.size()); 
-  unsigned int matrix[msize + 1][msize + 1];
+size_t T_edit_distance(string_type a, string_type b) {
+  size_t msize = MAX_OF_TWO(a.size(), b.size()); 
+  size_t matrix[msize + 1][msize + 1];
   matrix[0][0] = 0;
-  for (unsigned int x = 1; x < msize + 1; ++x) {matrix[x][0] = CLAMP(x, 0, a.size());};
-  for (unsigned int y = 1; y < msize + 1; ++y) {matrix[0][y] = CLAMP(y, 0, b.size());};
+  for (size_t x = 1; x < msize + 1; ++x) {matrix[x][0] = CLAMP(x, 0, a.size());};
+  for (size_t y = 1; y < msize + 1; ++y) {matrix[0][y] = CLAMP(y, 0, b.size());};
 
-  for (unsigned int x = 1; x < msize + 1; ++x) {
-    for (unsigned int y = 1; y < msize + 1; ++y) {
+  for (size_t x = 1; x < msize + 1; ++x) {
+    for (size_t y = 1; y < msize + 1; ++y) {
       matrix[x][y] = MIN_OF_THREE(matrix[x - 1][y], matrix[x - 1][y - 1], matrix[x][y - 1]);
       if (a[x - 1] != b[y - 1]) {++matrix[x][y];};
     }
@@ -78,11 +74,11 @@ unsigned int T_edit_distance(string_type a, string_type b) {
   return matrix[msize][msize];
 };
 
-unsigned int strlib::edit_distance(std::string a, std::string b) {
+size_t strlib::edit_distance(std::string a, std::string b) {
   return T_edit_distance<std::string>(a, b);
 };
 
-unsigned int strlib::edit_distance(std::wstring a, std::wstring b) {
+size_t strlib::edit_distance(std::wstring a, std::wstring b) {
   return T_edit_distance<std::wstring>(a, b);
 };
 

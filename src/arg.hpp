@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-#include "core.hpp"
+namespace lt {};
 
 namespace lt::arg {
   std::vector<std::string> parse(int argc, char** argv);

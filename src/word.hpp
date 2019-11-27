@@ -4,7 +4,9 @@
 #include <map>
 #include <vector>
 
-#include "core.hpp"
+namespace lt {
+  struct Word;
+};
 
 struct lt::Word {
   std::map<std::string, std::vector<std::string>> definitions;
@@ -13,5 +15,6 @@ struct lt::Word {
   void initialize_definition(std::string key);
   std::vector<std::string> get_definition(std::string key);
   float compare_to_definition(std::string key, std::string str);
+  std::string substitute_string(const std::string& str);
   Word();
 };

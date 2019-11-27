@@ -1,0 +1,5 @@
+#define MAX_OF_THREE(a, b, c) (a > (b > c ? b : c) ? a : (b > c ? b : c))
+#define MIN_OF_THREE(a, b, c) (a < (b < c ? b : c) ? a : (b < c ? b : c))
+#define MAX_OF_TWO(a, b) (a > b ? a : b)
+#define MIN_OF_TWO(a, b) (a < b ? a : b)
+#define CLAMP(a, min, max) (a < min ? min : (a > max ? max : a))

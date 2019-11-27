@@ -3,11 +3,10 @@
 #include <string>
 #include <vector>
 
-#include "core.hpp"
 #include "word.hpp"
 
-using namespace lt;
+namespace lt {};
 
 namespace lt::parse {
-  Word* as_word(std::string str);
+  lt::Word* as_word(std::string str);
 };
