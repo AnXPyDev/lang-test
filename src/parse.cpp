@@ -9,6 +9,10 @@
 using namespace lt;
 
 Word* parse::as_word(std::string str) {
+  if (str.substr(0, 1) == "#") {
+    return NULL;
+  };
+
   Word* result = new Word();
 
   int state = 1;

@@ -38,6 +38,7 @@ float Word::compare_to_definition(std::string key, std::string str) {
   this->initialize_definition(key);
   for (auto it = this->definitions[key].begin(); it < this->definitions[key].end(); ++it) {
     float current = strlib::percentual_similiarity(strlib::string_to_wstring(str), strlib::string_to_wstring(*it));
+    //std::cout << *it << " " << str << " " << current << std::endl;
     result = (current > result ? current : result);
   };
   return result;

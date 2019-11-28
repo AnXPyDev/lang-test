@@ -94,3 +94,14 @@ float strlib::percentual_similiarity(std::string a, std::string b) {
 float strlib::percentual_similiarity(std::wstring a, std::wstring b) {
   return T_percentual_similiarity<std::wstring>(a, b);
 };
+
+std::string strlib::concat(std::vector<std::string> str, std::string delimiter) {
+  std::string result = "";
+  for (unsigned int i = 0; i < str.size(); ++i) {
+    result += str[i];
+    if (i < str.size() - 1) {
+      result += delimiter;
+    };
+  };
+  return result;
+};

@@ -13,4 +13,5 @@ namespace lt::strlib {
   float percentual_similiarity(std::string a, std::string b);
   float percentual_similiarity(std::wstring a, std::wstring b);
   std::wstring string_to_wstring(std::string str);
+  std::string concat(std::vector<std::string> str, std::string delimiter = "");
 };
