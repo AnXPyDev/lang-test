@@ -9,7 +9,8 @@
 using namespace lt;
 
 std::vector<std::string> ARGS;
-std::vector<Word*> words;
+std::vector<lt::Word*> words;
+lt::Dictionary dictionary;
 
 void load_dictionaries() {
   auto file_names = arg::values("-d", ARGS);
@@ -20,11 +21,7 @@ void load_dictionaries() {
       continue;
     }
     for (std::string line; std::getline(file, line);) {
-      //std::cout << line << std::endl;
-      auto word = parse::as_word(line);
-      if (word != NULL) {
-        words.push_back(parse::as_word(line));
-      };
+      parse::to_dictionary(line, &dictionary);
     };
     file.close();
   };
@@ -61,6 +58,5 @@ int main(int argc, char** argv) {
     std::cout << "-l requires two values" << std::endl;
     return 0;
   };
-  test(langs[0], langs[1]);
   return 0;
 };

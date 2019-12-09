@@ -1,6 +1,6 @@
 CC=g++
-OBJ=main.o strlib.o word.o parse.o arg.o random.o
-DEPS=src/strlib.hpp src/word.hpp src/parse.hpp src/arg.hpp src/random.hpp
+OBJ=main.o strlib.o word.o parse.o arg.o random.o definition.o dictionary.o
+DEPS=src/strlib.hpp src/word.hpp src/parse.hpp src/arg.hpp src/random.hpp src/definition.hpp src/dictionary.hpp
 
 main: $(OBJ) $(DEPS)
 	$(CC) -g -o lang-test $(OBJ)
@@ -22,6 +22,12 @@ arg.o: $(DEPS)
 
 random.o: $(DEPS)
 	$(CC) -c src/random.cpp
+
+definition.o: $(DEPS)
+	$(CC) -c src/definition.cpp
+
+dictionary.o: $(DEPS)
+	$(CC) -c src/dictionary.cpp
 
 clean:
 	rm -f lang-test $(OBJ)

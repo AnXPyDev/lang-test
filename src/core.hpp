@@ -7,3 +7,4 @@ namespace lt {};
 #include "strlib.hpp"
 #include "word.hpp"
 #include "random.hpp"
+#include "definition.hpp"
