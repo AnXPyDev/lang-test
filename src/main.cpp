@@ -60,7 +60,7 @@ void test() {
     total_score += test_definition(definitions[*it], langs[0], langs[1]);
   }
 
-  std::cout << "You scored: " << total_score << "/" << max_score << " or " << (int)((total_score/max_score)*100) << std::endl;
+  std::cout << "You scored: " << total_score << "/" << max_score << " or " << (int)((total_score/max_score)*100) << "%" << std::endl;
   
 }
 

@@ -1,43 +1,43 @@
-DE -> das Abendessen; SK -> večera
-DE -> alles; SK -> všetko
-DE -> backen; SK -> piecť, upiecť
-DE -> beginnen; SK -> začať
-DE -> bestellen; SK -> objednať
-DE -> essen; SK -> jesť
-DE -> das Essen; SK -> jedlo
-DE -> euer; SK -> váš
-DE -> fahren; SK -> jazdiť, ísť
-DE -> fast; SK -> skoro, takmer
-DE -> frisch; SK -> čerstvý
-DE -> das Frühstück; SK -> raňajky
-DE -> frühstücken; SK -> raňajkovať
-DE -> geben; SK -> dať, dávať
-DE -> genügen; SK -> stačiť
-DE -> hoch; SK -> vysoký, vysoko
-DE -> der Hunger; SK -> hlad
-DE -> kalt; SK -> studený, chladný
-DE -> kochen; SK -> variť, uvariť
-DE -> kurz; SK -> krátky
-DE -> laufen; SK -> bežať
-DE -> leider; SK -> bohužial
-DE -> lesen; SK -> čítať
-DE -> lieben; SK -> mať rád, milovať
-DE -> das Lieblingsrestaurant; SK -> oblúbená reštaurácia
-DE -> der Mann; SK -> muž
-DE -> das Mittagessen; SK -> obed
-DE -> naturlich; SK -> prirodzene
-DE -> nehmen; SK -> vziať, brať
-DE -> nur; SK -> iba
-DE -> das Obst; SK -> ovocie
-DE -> der Preis; SK -> cena
-DE -> satt; SK -> sýty, sýto
-DE -> schlafen; SK -> spať
-DE -> schmecken; SK -> chutnať, mať chuť
-DE -> sehen; SK -> vidieť, vídať
-DE -> sein; SK -> jeho
-DE -> die Suppe; SK -> polievka
-DE -> trinken; SK -> piť
-DE -> die Uhr; SK -> hodina
-DE -> zufrieden; SK -> spokojný
-DE -> die Zeitung; SK -> noviny
-DE -> zusammen; SK -> spolu, spoločne
+"DE" -> "das Abendessen" : "SK" -> "večera"
+"DE" -> "alles" : "SK" -> "všetko"
+"DE" -> "backen" : "SK" -> "piecť" "upiecť"
+"DE" -> "beginnen" : "SK" -> "začať"
+"DE" -> "bestellen" : "SK" -> "objednať"
+"DE" -> "essen" : "SK" -> "jesť"
+"DE" -> "das Essen" : "SK" -> "jedlo"
+"DE" -> "euer" : "SK" -> "váš"
+"DE" -> "fahren" : "SK" -> "jazdiť" "ísť"
+"DE" -> "fast" : "SK" -> "skoro" "takmer"
+"DE" -> "frisch" : "SK" -> "čerstvý"
+"DE" -> "das Frühstück" : "SK" -> "raňajky"
+"DE" -> "frühstücken" : "SK" -> "raňajkovať"
+"DE" -> "geben" : "SK" -> "dať" "dávať"
+"DE" -> "genügen" : "SK" -> "stačiť"
+"DE" -> "hoch" : "SK" -> "vysoký" "vysoko"
+"DE" -> "der Hunger" : "SK" -> "hlad"
+"DE" -> "kalt" : "SK" -> "studený" "chladný"
+"DE" -> "kochen" : "SK" -> "variť" "uvariť"
+"DE" -> "kurz" : "SK" -> "krátky"
+"DE" -> "laufen" : "SK" -> "bežať"
+"DE" -> "leider" : "SK" -> "bohužial"
+"DE" -> "lesen" : "SK" -> "čítať"
+"DE" -> "lieben" : "SK" -> "mať rád" "milovať"
+"DE" -> "das Lieblingsrestaurant" : "SK" -> "oblúbená reštaurácia"
+"DE" -> "der Mann" : "SK" -> "muž"
+"DE" -> "das Mittagessen" : "SK" -> "obed"
+"DE" -> "naturlich" : "SK" -> "prirodzene"
+"DE" -> "nehmen" : "SK" -> "vziať" "brať"
+"DE" -> "nur" : "SK" -> "iba"
+"DE" -> "das Obst" : "SK" -> "ovocie"
+"DE" -> "der Preis" : "SK" -> "cena"
+"DE" -> "satt" : "SK" -> "sýty" "sýto"
+"DE" -> "schlafen" : "SK" -> "spať"
+"DE" -> "schmecken" : "SK" -> "chutnať" "mať chuť"
+"DE" -> "sehen" : "SK" -> "vidieť" "vídať"
+"DE" -> "sein" : "SK" -> "jeho"
+"DE" -> "die Suppe" : "SK" -> "polievka"
+"DE" -> "trinken" : "SK" -> "piť"
+"DE" -> "die Uhr" : "SK" -> "hodina"
+"DE" -> "zufrieden" : "SK" -> "spokojný"
+"DE" -> "die Zeitung" : "SK" -> "noviny"
+"DE" -> "zusammen" : "SK" -> "spolu" "spoločne"

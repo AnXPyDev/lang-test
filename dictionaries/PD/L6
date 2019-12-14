@@ -1,44 +1,44 @@
-DE -> alle; SK -> všetci
-DE -> allein; SK -> sám
-DE -> anders; SK -> inak
-DE -> das Angebot; SK -> návrh, ponuka
-DE -> das Auto; SK -> auto
-DE -> der Bahnhof; SK -> nádražie
-DE -> der Becher; SK -> pohár
-DE -> bezahlen; SK -> zaplatiť
-DE -> böse; SK -> zlý, zle
-DE -> bringen; SK -> priniesť
-DE -> denken; SK -> mysleť
-DE -> die Diät; SK -> dieta
-DE -> dieser; SK -> tento
-DE -> dürfen; SK -> smieť
-DE -> der Einkauf; SK -> nákup
-DE -> das Einkaufen; SK -> nakupovanie
-DE -> die Entscheidung; SK -> rozhodnutie
-DE -> die Feier; SK -> oslava
-DE -> feiern; SK -> oslavovať
-DE -> die Flasche; SK -> flaša
-DE -> der Gast; SK -> hosť
-DE -> gewöhnlich; SK -> obyčajný
-DE -> das Glas; SK -> pohár
-DE -> grüßen; SK -> pozdraviť, zdraviť
-DE -> günstig; SK -> priaznivý
-DE -> jeder; SK -> každý
-DE -> kaputt; SK -> zničený, rozbitý
-DE -> können; SK -> môcť
-DE -> krank; SK -> chorý
-DE -> die Lage; SK -> poloha
-DE -> die Lebensmittel; SK -> potraviny
-DE -> müssen; SK -> musieť
-DE -> die Packung; SK -> balenie, balíček
-DE -> die Person; SK -> osoba
-DE -> das Schnitzel; SK -> rezeň
-DE -> sofort; SK -> ihneď, okamžite
-DE -> sollen; SK -> mať
-DE -> sowieso; SK -> tak či tak
-DE -> die Tasse; SK -> šialka
-DE -> angenehm; SK -> príjemný
-DE -> glücklich; SK -> šťastný
-DE -> vergessen; SK -> zabudnúť
-DE -> wirklich; SK -> skutočný, ozajstný, naozaj, skutočne
-DE -> wollen; SK -> chcieť
+"DE" -> "alle" : "SK" -> "všetci"
+"DE" -> "allein" : "SK" -> "sám"
+"DE" -> "anders" : "SK" -> "inak"
+"DE" -> "das Angebot" : "SK" -> "návrh" "ponuka"
+"DE" -> "das Auto" : "SK" -> "auto"
+"DE" -> "der Bahnhof" : "SK" -> "nádražie"
+"DE" -> "der Becher" : "SK" -> "pohár"
+"DE" -> "bezahlen" : "SK" -> "zaplatiť"
+"DE" -> "böse" : "SK" -> "zlý" "zle"
+"DE" -> "bringen" : "SK" -> "priniesť"
+"DE" -> "denken" : "SK" -> "mysleť"
+"DE" -> "die Diät" : "SK" -> "dieta"
+"DE" -> "dieser" : "SK" -> "tento"
+"DE" -> "dürfen" : "SK" -> "smieť"
+"DE" -> "der Einkauf" : "SK" -> "nákup"
+"DE" -> "das Einkaufen" : "SK" -> "nakupovanie"
+"DE" -> "die Entscheidung" : "SK" -> "rozhodnutie"
+"DE" -> "die Feier" : "SK" -> "oslava"
+"DE" -> "feiern" : "SK" -> "oslavovať"
+"DE" -> "die Flasche" : "SK" -> "flaša"
+"DE" -> "der Gast" : "SK" -> "hosť"
+"DE" -> "gewöhnlich" : "SK" -> "obyčajný"
+"DE" -> "das Glas" : "SK" -> "pohár"
+"DE" -> "grüßen" : "SK" -> "pozdraviť" "zdraviť"
+"DE" -> "günstig" : "SK" -> "priaznivý"
+"DE" -> "jeder" : "SK" -> "každý"
+"DE" -> "kaputt" : "SK" -> "zničený" "rozbitý"
+"DE" -> "können" : "SK" -> "môcť"
+"DE" -> "krank" : "SK" -> "chorý"
+"DE" -> "die Lage" : "SK" -> "poloha"
+"DE" -> "die Lebensmittel" : "SK" -> "potraviny"
+"DE" -> "müssen" : "SK" -> "musieť"
+"DE" -> "die Packung" : "SK" -> "balenie" "balíček"
+"DE" -> "die Person" : "SK" -> "osoba"
+"DE" -> "das Schnitzel" : "SK" -> "rezeň"
+"DE" -> "sofort" : "SK" -> "ihneď" "okamžite"
+"DE" -> "sollen" : "SK" -> "mať"
+"DE" -> "sowieso" : "SK" -> "tak či tak"
+"DE" -> "die Tasse" : "SK" -> "šialka"
+"DE" -> "angenehm" : "SK" -> "príjemný"
+"DE" -> "glücklich" : "SK" -> "šťastný"
+"DE" -> "vergessen" : "SK" -> "zabudnúť"
+"DE" -> "wirklich" : "SK" -> "skutočný" "ozajstný" "naozaj" "skutočne"
+"DE" -> "wollen" : "SK" -> "chcieť"
