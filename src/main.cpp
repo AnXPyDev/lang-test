@@ -22,41 +22,55 @@ void load_dictionaries() {
     }
     for (std::string line; std::getline(file, line);) {
       parse::to_dictionary(line, &dictionary);
-    };
+    }
     file.close();
-  };
-};
+  }
+}
 
-float test_word(Word* word, std::string from, std::string to) {
-  std::cout << strlib::concat(word->get_definition(from), ", ") << " (" << from << ") -> (" << to << ") ";
+float test_definition(lt::Definition* def, std::string from, std::string to) {
+  std::cout << strlib::concat(def->get_translation(from), ", ") << " (" << from << ") -> (" << to << ") ";
   std::string answer;
-  std::getline(std::cin, answer);
-  float result = word->compare_to_definition(to, answer);
-  std::cout << (int)(result * 100) << "% correct, Correct answers: " << strlib::concat(word->get_definition(to), ", ") << std::endl;
+  std::cin >> answer;
+  float result = def->check_translation(to, answer);
+  std::cout << result*100 << "%, correct answers: " << strlib::concat(def->get_translation(to), ", ") << std::endl;
   return result;
 }
 
-void test(std::string from, std::string to) {
-  int count = words.size();
-  auto narg = arg::values("-n", ARGS);
-  if (narg.size() > 0) {
-    count = stoi(narg[0]);
-  };
-  auto order = random::unique_integer(0, words.size() - 1, count);
-  float total = 0.f;
+void test() {
+  auto langs = arg::values("-l", ARGS);
+  if (langs.size() < 2 or !arg::exists("-l", ARGS)) {
+    std::cout << "-l requires two values" << std::endl;
+    return;
+  }
+  auto definitions = dictionary.get_translatable(langs[0], langs[1]);
+  int n = definitions.size();
+  if (arg::exists("-n", ARGS)) {
+    auto vals = arg::values("-n", ARGS);
+    if (vals.size() > 0) {
+      n = CLAMP(stoi(vals[0]), 0, n);
+    }
+  }
+
+  float total_score = 0;
+  float max_score = (float)n;
+
+  auto order = random::unique_integer(0, definitions.size() - 1, n);
+
   for (auto it = order.begin(); it < order.end(); ++it) {
-    total += test_word(words[*it], from, to);
-  };
-  std::cout << "Total score " << (int)total << "/" << count << " or " << (int)((total / (float)count) * 100) << "%" << std::endl;
+    total_score += test_definition(definitions[*it], langs[0], langs[1]);
+  }
+
+  std::cout << "You scored: " << total_score << "/" << max_score << " or " << (int)((total_score/max_score)*100) << std::endl;
+  
 }
 
 int main(int argc, char** argv) {
   ARGS = arg::parse(argc, argv);
   load_dictionaries();
-  auto langs = arg::values("-l", ARGS);
-  if (langs.size() < 2) {
-    std::cout << "-l requires two values" << std::endl;
-    return 0;
-  };
+
+  if (arg::exists("-t", ARGS)) {
+    test();
+  }
+
   return 0;
-};
+}

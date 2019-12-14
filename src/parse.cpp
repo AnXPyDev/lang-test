@@ -12,7 +12,7 @@ using namespace lt;
 Word* parse::as_word(std::string str) {
   if (str.substr(0, 1) == "#") {
     return NULL;
-  };
+  }
 
   Word* result = new Word();
 
@@ -22,14 +22,14 @@ Word* parse::as_word(std::string str) {
   while (true) {
     size_t semicolon = str.find(";", look_from);
     size_t first_quote = str.find("\"", look_from);
-    if (first_quote == std::string::npos) {break;};
+    if (first_quote == std::string::npos) {break;}
     if (semicolon < first_quote) {
       state = 1;
       look_from = semicolon + 1;
       continue;
-    };
+    }
     size_t second_quote = str.find("\"", first_quote + 1);
-    if (second_quote == std::string::npos) {break;};
+    if (second_quote == std::string::npos) {break;}
     std::string cut = str.substr(first_quote + 1, second_quote - first_quote - 1);
     if (state == 1) {
       current_key = cut;
@@ -40,10 +40,10 @@ Word* parse::as_word(std::string str) {
     }
     look_from = second_quote + 1;
     //std::cout << semicolon << " "<< first_quote << " " << second_quote << " " << cut << std::endl;
-  };
+  }
 
   return result;
-};
+}
 
 
 struct Intermediate_defintion {
@@ -57,7 +57,7 @@ void parse::to_dictionary(std::string str, lt::Dictionary* dictionary) {
   std::vector<Intermediate_defintion*> ids;
   if (str.substr(0, 1) == "#" || str.substr(0, 1) == " ") {
     return;
-  };
+  }
 
   short int last_equality = 0;
   short int state = 1;
@@ -68,17 +68,17 @@ void parse::to_dictionary(std::string str, lt::Dictionary* dictionary) {
     short int equality = 0;
     if (equality_pos != std::string::npos) {
       equality = str.substr(equality_pos - 1, 1) == "<" ? -1 : (str.substr(equality_pos + 1, 1) == ">" ? 1 : 0);
-    };
+    }
     size_t first_quote = str.find("\"", look_from);
-    if (first_quote == std::string::npos) {break;};
+    if (first_quote == std::string::npos) {break;}
     if (equality_pos < first_quote) {
       state = 1;
       look_from = equality_pos + 1;
       last_equality = equality;
       continue;
-    };
+    }
     size_t second_quote = str.find("\"", first_quote + 1);
-    if (second_quote == std::string::npos) {break;};
+    if (second_quote == std::string::npos) {break;}
     std::string cut = str.substr(first_quote + 1, second_quote - first_quote - 1);
     if (state == 1) {
       current_key = cut;
@@ -88,7 +88,7 @@ void parse::to_dictionary(std::string str, lt::Dictionary* dictionary) {
     }
     look_from = second_quote + 1;
     //std::cout << semicolon << " "<< first_quote << " " << second_quote << " " << cut << std::endl;
-  };
+  }
 
 
   for (int i = 0; i < ids.size(); ++i) {
@@ -97,18 +97,18 @@ void parse::to_dictionary(std::string str, lt::Dictionary* dictionary) {
         if (ids[x]->right_equality != 1) {
           dictionary->set_translation(ids[i]->language, ids[i]->word, ids[x]->language, ids[x]->word, ids[i]->left_equality == -1);
           continue;
-        };
+        }
         break;
-      };
-    };
+      }
+    }
     if (ids[i]->right_equality != -1) {
       for (int x = i + 1; x < ids.size(); ++x) {
         if (ids[x]->left_equality != -1) {
           dictionary->set_translation(ids[i]->language, ids[i]->word, ids[x]->language, ids[x]->word, ids[i]->right_equality == 1);
           continue;
-        };
+        }
         break;
-      };
-    };
-  };
-};
+      }
+    }
+  }
+}

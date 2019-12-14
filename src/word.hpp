@@ -6,7 +6,7 @@
 
 namespace lt {
   struct Word;
-};
+}
 
 struct lt::Word {
   std::map<std::string, std::vector<std::string>> definitions;

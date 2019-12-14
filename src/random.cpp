@@ -12,15 +12,15 @@ std::default_random_engine randomizer(time(NULL));
 int random::integer(int min, int max) {
   std::uniform_int_distribution<int> distribution(min, max);
   return distribution(randomizer);
-};
+}
 
 std::vector<int> random::integer(int min, int max, unsigned int n) {
   std::vector<int> result;
   for (unsigned int i = 0; i < n; ++i) {
     result.push_back(random::integer(min, max));
-  };
+  }
   return result;
-};
+}
 
 std::vector<int> random::unique_integer(int min, int max, unsigned int n) {
   std::vector<int> result;

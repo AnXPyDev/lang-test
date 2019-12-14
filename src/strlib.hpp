@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-namespace lt {};
+namespace lt {}
 
 namespace lt::strlib {
   std::vector<std::string> split(std::string str, std::string delimiter);
@@ -14,4 +14,4 @@ namespace lt::strlib {
   float percentual_similiarity(std::wstring a, std::wstring b);
   std::wstring string_to_wstring(std::string str);
   std::string concat(std::vector<std::string> str, std::string delimiter = "");
-};
+}

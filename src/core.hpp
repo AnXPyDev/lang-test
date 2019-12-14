@@ -1,6 +1,8 @@
 #pragma once
 
-namespace lt {};
+namespace lt {}
+
+#include "macros.hpp"
 
 #include "arg.hpp"
 #include "parse.hpp"
