@@ -30,7 +30,7 @@ void load_dictionaries() {
 float test_definition(lt::Definition* def, std::string from, std::string to) {
   std::cout << strlib::concat(def->get_translation(from), ", ") << " (" << from << ") -> (" << to << ") ";
   std::string answer;
-  std::cin >> answer;
+  std::getline(std::cin, answer);
   float result = def->check_translation(to, answer);
   std::cout << result*100 << "%, correct answers: " << strlib::concat(def->get_translation(to), ", ") << std::endl;
   return result;
